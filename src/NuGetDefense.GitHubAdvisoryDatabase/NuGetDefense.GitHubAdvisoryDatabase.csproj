@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>9</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GraphQL.Client" Version="3.2.4" />
+        <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="3.2.4" />
+        <PackageReference Include="NuGetDefense.Core" Version="2.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="NuGetDefense.GitHubAdvisoryDatabase.Tests\UnitTest1.cs">
+        <Link>GithubAdvisoryDatabaseClientTests\UnitTest1.cs</Link>
+      </Compile>
+    </ItemGroup>
+
+</Project>
