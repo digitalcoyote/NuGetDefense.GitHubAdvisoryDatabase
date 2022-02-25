@@ -1,14 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageVersion>1.0.0-pre0001</PackageVersion>
+        <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
+        <Authors>Curtis Carter</Authors>
+        <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
+        <PackageProjectUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</PackageProjectUrl>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/main/LICENSE</PackageLicenseUrl>
+        <PackageIconUrl>https://rawcdn.githack.com/digitalcoyote/NuGetDefense/fd630023e9eb40d3282a1244b05f55eea2c7b22a/images/logo.svg</PackageIconUrl>
+        <RepositoryUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>NuGetDefense Security</PackageTags>
+        <TargetFramework>net5.0</TargetFramework>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GraphQL.Client" Version="3.2.4" />
-        <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="3.2.4" />
+        <PackageReference Include="GraphQL.Client" Version="4.0.2" />
+        <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="4.0.2" />
         <PackageReference Include="NuGetDefense.Core" Version="2.0.2" />
     </ItemGroup>
 
