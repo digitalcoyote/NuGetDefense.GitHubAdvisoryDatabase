@@ -4,17 +4,19 @@
         <LangVersion>9</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.0-pre0001</PackageVersion>
+        <PackageVersion>1.0.2</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
         <PackageProjectUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</PackageProjectUrl>
         <PackageLicenseUrl>https://raw.githubusercontent.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/main/LICENSE</PackageLicenseUrl>
-        <PackageIconUrl>https://rawcdn.githack.com/digitalcoyote/NuGetDefense/fd630023e9eb40d3282a1244b05f55eea2c7b22a/images/logo.svg</PackageIconUrl>
         <RepositoryUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>NuGetDefense Security</PackageTags>
         <TargetFramework>net5.0</TargetFramework>
+        <PackageIcon>icon.png</PackageIcon>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
 
     <ItemGroup>
@@ -27,6 +29,13 @@
       <Compile Update="NuGetDefense.GitHubAdvisoryDatabase.Tests\UnitTest1.cs">
         <Link>GithubAdvisoryDatabaseClientTests\UnitTest1.cs</Link>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="icon.png">
+        <Pack>True</Pack>
+        <PackagePath></PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

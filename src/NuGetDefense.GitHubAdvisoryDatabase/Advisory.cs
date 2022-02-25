@@ -20,7 +20,8 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
                 _ => Vulnerability.AccessVectorType.UNSPECIFIED
             };
             var refs = References.Select(r => r.Url.ToString()).ToArray();
-            return new(id, Cvss.Score ?? -1, Cwes.Edges[0].Node.Id, Summary, refs, vectorType, "");
+            var cwe = Cwes.Edges.Length > 0 ? Cwes.Edges[0].Node.Id : string.Empty;
+            return new(id, Cvss.Score ?? -1, cwe, Summary, refs, vectorType, "");
         }
     }
 }
