@@ -43,17 +43,15 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
                     for (var index = 0; index < githubResponse.SecurityVulnerabilities.Nodes.Length; index++)
                     {
                         var securityAdvisoryNode = githubResponse.SecurityVulnerabilities.Nodes[index];
-                        var vulnerableVersionRange = VersionRange.Parse(ToNugetRange(securityAdvisoryNode.VulnerableVersionRange));
-                        if (!vulnerableVersionRange.Satisfies(new(pkg.Version))) continue;
+                        if (ToNugetRange(securityAdvisoryNode.VulnerableVersionRange).Any(r => !VersionRange.Parse(r).Satisfies(new(pkg.Version)))) continue;
 
                         var cve = securityAdvisoryNode.Advisory.Identifiers.FirstOrDefault(id => vulnDict.ContainsKey(id.Value));
                         if (cve != null) continue;
 
                         cve = securityAdvisoryNode.Advisory.Identifiers[0];
-                        vulnDict[pkg.Id].Add(cve.Value, securityAdvisoryNode.Advisory.ToNuGetDefenseVulnerability());
+                        if(!vulnDict[pkg.Id].ContainsKey(cve.Value)) vulnDict[pkg.Id].Add(cve.Value, securityAdvisoryNode.Advisory.ToNuGetDefenseVulnerability());
                     }
                 }
-
             }
             catch (Exception e)
             {
@@ -65,23 +63,26 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
             }
 
         /// <summary>
-        /// Converts the ranges reported by GitHub into NuGet Ranges
+        /// Converts the ranges reported by GitHub into an Array of NuGet Ranges
         /// </summary>
         /// <param name="vulnerableVersionRange"></param>
         /// <returns></returns>
         /// <exception cref="NotImplementedException"></exception>
-        private string ToNugetRange(string vulnerableVersionRange)
+        public static string[] ToNugetRange(string vulnerableVersionRange)
         {
-            var parts = vulnerableVersionRange.Split(' ');
-            return parts[0] switch
+            return vulnerableVersionRange.Split(',').Select(r =>
             {
-                "<" => $"(,{parts[1]})",
-                "<=" => $"(,{parts[1]}]",
-                ">" => $"({parts[1]},)",
-                ">=" => $"[{parts[1]},)",
-                "=" => parts[1],
-                _ => vulnerableVersionRange
-            };
+                var parts = r.Trim().Split(' ');
+                return parts[0] switch
+                {
+                    "<" => $"(,{parts[1]})",
+                    "<=" => $"(,{parts[1]}]",
+                    ">" => $"({parts[1]},)",
+                    ">=" => $"[{parts[1]},)",
+                    "=" => parts[1],
+                    _ => vulnerableVersionRange
+                };
+            }).ToArray();
         }
 
         private async Task<GraphQLResponse<Data>> QueryVulnerabilitiesForPacakgeId(string packageid)
