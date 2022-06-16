@@ -1,10 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <LangVersion>9</LangVersion>
+        <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>1.0.3</PackageVersion>
+        <PackageVersion>2.0.0</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
@@ -15,6 +15,8 @@
         <PackageTags>NuGetDefense Security</PackageTags>
         <TargetFramework>net5.0</TargetFramework>
         <PackageIcon>icon.png</PackageIcon>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     </PropertyGroup>
@@ -22,7 +24,7 @@
     <ItemGroup>
         <PackageReference Include="GraphQL.Client" Version="4.0.2" />
         <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="4.0.2" />
-        <PackageReference Include="NuGetDefense.Core" Version="2.0.2" />
+        <PackageReference Include="NuGetDefense.Core" Version="2.0.3" />
     </ItemGroup>
 
     <ItemGroup>
