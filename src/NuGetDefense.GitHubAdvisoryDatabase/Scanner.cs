@@ -33,23 +33,23 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
 
             try
             {
-
                 foreach (var pkg in pkgs)
                 {
                     var githubResponse = QueryVulnerabilitiesForPacakgeId(pkg.Id).Result.Data;
                     if (githubResponse.SecurityVulnerabilities.TotalCount <= 0) continue;
 
-                    if (!vulnDict.ContainsKey(pkg.Id)) vulnDict.Add(pkg.Id, new());
+                    // NuGetDefense.VulnerabilityReporter.BuildVulnerabilityTextReport requires the vulnerabilities to be keyed in package url (lower case).
+                    if (!vulnDict.ContainsKey(pkg.PackageUrl.ToLowerInvariant())) vulnDict.Add(pkg.PackageUrl.ToLowerInvariant(), new());
                     for (var index = 0; index < githubResponse.SecurityVulnerabilities.Nodes.Length; index++)
                     {
                         var securityAdvisoryNode = githubResponse.SecurityVulnerabilities.Nodes[index];
                         if (ToNugetRange(securityAdvisoryNode.VulnerableVersionRange).Any(r => !VersionRange.Parse(r).Satisfies(new(pkg.Version)))) continue;
-
+                        
                         var cve = securityAdvisoryNode.Advisory.Identifiers.FirstOrDefault(id => vulnDict.ContainsKey(id.Value));
                         if (cve != null) continue;
-
+                        
                         cve = securityAdvisoryNode.Advisory.Identifiers[0];
-                        if(!vulnDict[pkg.Id].ContainsKey(cve.Value)) vulnDict[pkg.Id].Add(cve.Value, securityAdvisoryNode.Advisory.ToNuGetDefenseVulnerability());
+                        if(!vulnDict[pkg.PackageUrl.ToLowerInvariant()].ContainsKey(cve.Value)) vulnDict[pkg.PackageUrl.ToLowerInvariant()].Add(cve.Value, securityAdvisoryNode.Advisory.ToNuGetDefenseVulnerability());
                     }
                 }
             }
