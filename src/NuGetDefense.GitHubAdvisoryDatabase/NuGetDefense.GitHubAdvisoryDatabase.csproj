@@ -9,7 +9,7 @@
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
         <PackageProjectUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</PackageProjectUrl>
-        <PackageLicenseUrl>https://raw.githubusercontent.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/main/LICENSE</PackageLicenseUrl>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>NuGetDefense Security</PackageTags>
