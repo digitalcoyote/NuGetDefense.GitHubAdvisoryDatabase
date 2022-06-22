@@ -4,7 +4,7 @@
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>2.0.0</PackageVersion>
+        <PackageVersion>2.0.1</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>

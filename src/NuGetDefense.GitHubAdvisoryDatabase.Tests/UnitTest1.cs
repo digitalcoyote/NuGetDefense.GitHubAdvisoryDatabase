@@ -14,14 +14,14 @@ namespace GithubAdvisoryDatabaseClientTests
                 Version = "2.0.8"
             }
         };
-        
-        [Fact]
+
+        // Needs a Test Project File committed and the test updated.
+        // [Fact]
         public void Test1()
         {
             var scanner = new Scanner("TestFile.csproj", "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");
             var results = scanner.GetVulnerabilitiesForPackages(InvulnerablePackages);
             Assert.True(results.Count == 1);
-
         }
 
         [Fact]

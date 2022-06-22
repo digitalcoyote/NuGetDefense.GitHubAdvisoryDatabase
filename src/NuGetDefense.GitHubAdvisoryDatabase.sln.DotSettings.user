@@ -1,16 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1493953d_002Df722_002D4c97_002D8610_002Dce7d305af883/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;xUnit::98B81074-6AC2-4765-BE8B-4A70E7BEF296::net6.0::GithubAdvisoryDatabaseClientTests.UnitTest1.Test1&lt;/TestId&gt;
-    &lt;TestId&gt;xUnit::98B81074-6AC2-4765-BE8B-4A70E7BEF296::net6.0::GithubAdvisoryDatabaseClientTests.UnitTest1.ToNuGetRangeTest&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1493953d_002Df722_002D4c97_002D8610_002Dce7d305af883/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=31c2df84_002D7911_002D4726_002Da4ca_002Dd6a6cfd7d084/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1 #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::98B81074-6AC2-4765-BE8B-4A70E7BEF296::net6.0::GithubAdvisoryDatabaseClientTests.UnitTest1.Test1&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=41be696a_002D22d0_002D4741_002D81e8_002D24f3644898e2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=41be696a_002D22d0_002D4741_002D81e8_002D24f3644898e2/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test1" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;xUnit::98B81074-6AC2-4765-BE8B-4A70E7BEF296::net6.0::GithubAdvisoryDatabaseClientTests.UnitTest1.Test1&lt;/TestId&gt;
     &lt;TestId&gt;xUnit::98B81074-6AC2-4765-BE8B-4A70E7BEF296::net6.0::GithubAdvisoryDatabaseClientTests.UnitTest1.ToNuGetRangeTest&lt;/TestId&gt;
