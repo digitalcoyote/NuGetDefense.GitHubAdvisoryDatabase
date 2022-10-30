@@ -4,7 +4,7 @@
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>2.0.1</PackageVersion>
+        <PackageVersion>2.0.2</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
@@ -19,12 +19,13 @@
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+        <PackageReleaseNotes>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/releases/tag/v2.0.2</PackageReleaseNotes>
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="GraphQL.Client" Version="4.0.2" />
-        <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="4.0.2" />
-        <PackageReference Include="NuGetDefense.Core" Version="2.0.3" />
+        <PackageReference Include="GraphQL.Client" Version="5.1.0" />
+        <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="5.1.0" />
+        <PackageReference Include="NuGetDefense.Core" Version="2.0.4" />
     </ItemGroup>
 
     <ItemGroup>
