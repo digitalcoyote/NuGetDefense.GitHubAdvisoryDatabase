@@ -4,7 +4,7 @@
         <LangVersion>10</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>2.0.2</PackageVersion>
+        <PackageVersion>2.0.3</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
@@ -13,13 +13,14 @@
         <RepositoryUrl>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageTags>NuGetDefense Security</PackageTags>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <PackageIcon>icon.png</PackageIcon>
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageReleaseNotes>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/releases/tag/v2.0.2</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/releases/tag/v2.0.3</PackageReleaseNotes>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
     </PropertyGroup>
 
     <ItemGroup>
@@ -38,6 +39,11 @@
       <None Update="icon.png">
         <Pack>True</Pack>
         <PackagePath></PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="..\..\README.md" Pack="true" PackagePath="\">
       </None>
     </ItemGroup>
 
