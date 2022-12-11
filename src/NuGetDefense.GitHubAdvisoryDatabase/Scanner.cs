@@ -79,7 +79,7 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
                     "<=" => $"(,{parts[1]}]",
                     ">" => $"({parts[1]},)",
                     ">=" => $"[{parts[1]},)",
-                    "=" => parts[1],
+                    "=" => $"[{parts[1]}]",
                     _ => vulnerableVersionRange
                 };
             }).ToArray();
