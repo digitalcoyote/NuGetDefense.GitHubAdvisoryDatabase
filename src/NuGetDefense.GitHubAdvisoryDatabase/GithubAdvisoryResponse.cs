@@ -78,7 +78,7 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
         public string VectorString { get; set; }
         
         [JsonPropertyName("score")]
-        public double? Score { get; set; }
+        public decimal? Score { get; set; }
     }
 
     public partial class Cwes

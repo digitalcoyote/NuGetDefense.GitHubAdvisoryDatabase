@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
-using System.Net.Http.Headers;
-using System.Net.WebSockets;
 using System.Threading.Tasks;
 using GraphQL;
 using GraphQL.Client.Http;
@@ -140,6 +137,7 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
             return await graphQLClient.SendQueryAsync<Data>(req);
         }
 
-        private const string? userAgent = @"NuGetDefense.GitHubAdvisoryDatabase/1.0.0 (https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/blob/master/README.md)";
+        private const string Version = "2.0.7"; 
+        private const string userAgent = $@"NuGetDefense.GitHubAdvisoryDatabase/{Version} (https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/blob/master/README.md)";
     }
 }
