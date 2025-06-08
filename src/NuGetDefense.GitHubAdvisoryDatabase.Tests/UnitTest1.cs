@@ -8,7 +8,7 @@ namespace GithubAdvisoryDatabaseClientTests
     public class UnitTest1
     {
         
-        private readonly NuGetPackage[] InvulnerablePackages = { new()
+        private readonly NuGetPackage[] _invulnerablePackages = { new()
             {
                 Id = "log4net",
                 Version = "2.0.8"
@@ -17,11 +17,11 @@ namespace GithubAdvisoryDatabaseClientTests
 
         // Needs a Test Project File committed and the test updated.
         // [Fact]
-        public void Test1()
+        public void ScanWorksWithTestProject()
         {
-            var scanner = new Scanner("TestFile.csproj", "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");
-            var results = scanner.GetVulnerabilitiesForPackages(InvulnerablePackages);
-            Assert.True(results.Count == 1);
+            var scanner = new Scanner("TestFile.csproj", "<Replace_With_API_Token>");
+            var results = scanner.GetVulnerabilitiesForPackages(_invulnerablePackages);
+            Assert.Single(results);
         }
 
         [Fact]
@@ -29,7 +29,7 @@ namespace GithubAdvisoryDatabaseClientTests
         {
             const string range = ">= 4.6.0, < 4.7.2";
             var ranges = Scanner.ToNugetRange(range);
-            Assert.True(ranges.Length == 2);
+            Assert.Equal(2, ranges.Length);
 
         }
     }

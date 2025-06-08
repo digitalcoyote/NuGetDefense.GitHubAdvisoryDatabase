@@ -137,7 +137,7 @@ namespace NuGetDefense.GitHubAdvisoryDatabase
             return await graphQLClient.SendQueryAsync<Data>(req);
         }
 
-        private const string Version = "2.0.7.2"; 
+        private const string Version = "2.0.7.3"; 
         private const string userAgent = $@"NuGetDefense.GitHubAdvisoryDatabase/{Version} (https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/blob/master/README.md)";
     }
 }

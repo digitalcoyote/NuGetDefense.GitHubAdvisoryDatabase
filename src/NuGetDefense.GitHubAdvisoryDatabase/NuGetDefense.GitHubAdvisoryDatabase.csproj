@@ -4,7 +4,7 @@
         <LangVersion>13</LangVersion>
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <PackageVersion>2.0.7.2</PackageVersion>
+        <PackageVersion>2.0.7.3</PackageVersion>
         <Title>NuGetDefense.GitHubAdvisoryDatabase</Title>
         <Authors>Curtis Carter</Authors>
         <Description>Provides logic to scan packages using GitHub's Security Advisory Database</Description>
@@ -18,17 +18,17 @@
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
         <IncludeSymbols>true</IncludeSymbols>
         <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-        <PackageReleaseNotes>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/releases/tag/v2.0.7.2</PackageReleaseNotes>
+        <PackageReleaseNotes>https://github.com/digitalcoyote/NuGetDefense.GitHubAdvisoryDatabase/releases/tag/v2.0.7.3</PackageReleaseNotes>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <AssemblyVersion>2.0.7.2</AssemblyVersion>
-        <FileVersion>2.0.7.2</FileVersion>
+        <AssemblyVersion>2.0.7.3</AssemblyVersion>
+        <FileVersion>2.0.7.3</FileVersion>
         <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="GraphQL.Client" Version="6.1.0" />
         <PackageReference Include="GraphQL.Client.Serializer.SystemTextJson" Version="6.1.0" />
-        <PackageReference Include="NuGetDefense.Core" Version="2.0.13.4" />
+        <PackageReference Include="NuGetDefense.Core" Version="2.0.14" />
     </ItemGroup>
 
     <ItemGroup>
